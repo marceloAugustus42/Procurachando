@@ -1,0 +1,65 @@
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: white;
+    box-shadow: 20px;
+    padding-top: 2%;
+    border-radius: 10px;
+    border-bottom: 3px solid #333;
+    border-right: 3px solid #333;
+    margin-top: -1.8%;
+  }
+
+body {
+    height: 103.1vh;
+    background: linear-gradient(0deg, #A4C9D1, #0000);
+}
+
+img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 47%;
+    }
+  
+  nav {
+    width: 17%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 25%;
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+}
+
+  .buscar{
+    width: 11%;
+    display: flex;
+    justify-content: center;
+    padding: 1% 6%;
+    border-radius: 12px;
+    margin-top: 2.5%;
+    margin-left: 38%;
+  }
+
+  nav button {
+    width: 40%;
+    height: 45px;
+    background-color: black;
+    border-radius: 20px;
+    color: white;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+::-webkit-input-placeholder{
+    font-family: Bold Italic;
+    font-size: 19px;
+}
+
