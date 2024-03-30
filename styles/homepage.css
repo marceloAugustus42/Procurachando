@@ -1,8 +1,8 @@
 header {
-    display: flex;
+    display: flex;  
     flex-direction: row;
-    align-items: center;
-    background-color: white;
+    align-items: center; 
+    background-color: #025964;
     box-shadow: 20px;
     padding-top: 2%;
     border-radius: 10px;
@@ -11,9 +11,21 @@ header {
     margin-top: -1.8%;
   }
 
+  header div#LupaHeader img{ /*Depois que atualizei as imagens por algum motivo não consegui centralizar a lupa e os botões*/
+    display: block;
+    margin: auto;
+    max-width: 100%;
+  }
+
 body {
     height: 103.1vh;
-    background: linear-gradient(0deg, #A4C9D1, #0000);
+    background: linear-gradient(0deg, #078B97, #004853);
+}
+
+div#img-responsiva img {
+  display: block; /*"prender" a imagem*/
+  margin: 5px auto;
+  max-width: 100%; /*Redimensionamento automatico*/
 }
 
 img{
@@ -22,19 +34,18 @@ img{
     justify-content: center;
     margin-left: 47%;
     }
-  
+
   nav {
     width: 17%;
     display: flex;
+    align-items:end;
     justify-content: space-between;
-    margin-left: 25%;
+    margin-left: 78%;
   }
-
   a {
     text-decoration: none;
     color: white;
 }
-
   .buscar{
     width: 11%;
     display: flex;
@@ -48,7 +59,7 @@ img{
   nav button {
     width: 40%;
     height: 45px;
-    background-color: black;
+    background-color: #078B97;
     border-radius: 20px;
     color: white;
     text-align: center;
