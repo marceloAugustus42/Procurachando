@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
     height: 98vh;
     background: linear-gradient(0deg, #078B97, #004853);
@@ -39,4 +40,46 @@ a {
     padding: 1%;
     border-radius: 12px;
     margin-left: 38%;
+=======
+body {
+    height: 98vh;
+    background: linear-gradient(0deg, #078B97, #004853);
+}
+
+form{
+    margin-top: 10%;
+    display: block;
+    height: 60vh;
+    background-color: aliceblue;
+    border-radius: 23px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.logo{
+    margin-left: 26%;
+}
+
+.buscar{
+    width: 11%;
+    display: flex;
+    justify-content: center;
+    padding: 1% 6%;
+    border-radius: 12px;
+    margin-top: 2.5%;
+    margin-left: 43%;
+    font-family: 'Times New Roman', Times, serif;
+  }
+
+.box{
+    width: 20%;
+    display: flex;
+    justify-content: start;
+    padding: 1%;
+    border-radius: 12px;
+    margin-left: 38%;
+>>>>>>> 2d7f7abe9aacbd6d158879933f1fb373bf1b3201
 }
