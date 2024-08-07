@@ -1,26 +1,38 @@
-header {
-    display: flex;  
-    flex-direction: row;
-    align-items: center; 
-    background-color: #025964;
-    box-shadow: 20px;
-    padding-top: 2%;
-    border-radius: 10px;
-    border-bottom: 3px solid #333;
-    border-right: 3px solid #333;
-    margin-top: -1.8%;
-  }
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
 
-  header div#LupaHeader img{ /*Depois que atualizei as imagens por algum motivo não consegui centralizar a lupa e os botões*/
-    display: block;
-    margin: auto;
-    max-width: 100%;
-    margin-left: 1560%;
-  }
+.cabecalho {
+  display: flex;  
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #025964;
+  box-shadow: 20px;
+  padding-top: 2%;
+  border-radius: 10px;
+  border-bottom: 3px solid #333;
+  border-right: 3px solid #333;
+  margin-top: -1.8%;
+  flex-wrap: wrap;
+}
+
+#LupaHeader{ 
+  display: flex;
+  max-width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  margin-left: 15%;
+}
 
 body {
-    height: 103.1vh;
-    background: linear-gradient(0deg, #078B97, #004853);
+  background: linear-gradient(0deg, #078B97, #004853);
 }
 
 div#img-responsiva img {
@@ -29,60 +41,91 @@ div#img-responsiva img {
   max-width: 100%; /*Redimensionamento automatico*/
 }
 
-img{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 47%;
-    }
-
-  nav {
-    width: 17%;
-    display: flex;
-    align-items:end;
-    justify-content: space-between;
-    margin-left: 78%;
-  }
-  a {
-    text-decoration: none;
-    color: white;
-}
-  .buscar{
-    width: 19%;
-    display: flex;
-    justify-content: center;
-    padding: 1% 2%;
-    border-radius: 12px;
-    margin-top: 2.5%;
-    margin-left: 38%;
+.banner{
+  display: flex;
+  align-items: center;
+  justify-content: center;
   }
 
-  nav button {
-    width: 40%;
-    height: 45px;
-    background-color: #078B97;
-    border-radius: 20px;
-    color: white;
-    text-align: center;
-    display: inline-block;
-    font-size: 16px;
-    margin-left: 15px;
-    cursor: pointer;
+.botoes-cab {
+  width: 17%;
+  display: flex;
+  justify-content: flex-end;
+  flex-shrink: 1;
+  }
+
+a {
+  text-decoration: none;
+  color: white;
 }
 
-#categorias{
+.buscar{
+  width: 19%;
+  display: flex;
+  justify-content: center;
+  padding: 1% 2%;
+  border-radius: 12px;
+  margin-top: 2.5%;
+  margin-left: 38%;
+}
+
+.botao-cab{
+  width: 40%;
+  height: 45px;
+  background-color: #078B97;
+  border-radius: 20px;
+  color: white;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  margin-left: 2%;
+  cursor: pointer;
+}
+
+#titulos{
   font-family: Semi Bold Italic;
   color:#fff;
   margin-left: 5%;
 
 }
 
-.categorias {
+.botoes-cat {
   display: flex;
   justify-content: space-around;
   gap: 5%; 
   padding: 2%; 
-  background-color:azure;
+}
+
+.botao-cat{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 10%;
+  height: auto;
+  background-color: #078B97;
+  border-radius: 20px;
+  color: white;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.botao-cat img {
+  width: 60%; 
+  height: auto;
+}
+
+.botao-cat a {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  justify-content: center;
+  color: white; 
+  text-decoration: none;
+  height: 100%; 
+  width: 100%;
 }
 
 form {
@@ -93,7 +136,7 @@ form {
   display: flex;
   justify-content: space-around; 
   padding: 2%; 
-  background-color:azure;
+
 }
 
 .image-item{
@@ -102,13 +145,15 @@ form {
   justify-content: center;
   align-items: center;
   padding: 20px;
-  background-color: aquamarine;
+  background-color: #FFFF;
   max-width: 100%;
   height: auto;
   border-radius: 8px;
 }
 
 .ajuste-imagem{
+  width: 300px;
+  height: 300px;
   padding: 9%;
   margin: -9%;
   border-radius: 8px;
@@ -119,14 +164,25 @@ form {
     font-size: 19px;
 }
 
-footer {
+.rodape {
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
 	background-color: #333;
 	color: #fff;
   padding: 2%;
 	text-align: center;
 	margin-top: 4%;
+  flex-wrap: wrap;
+}
+
+.info{
+  display: flex;
+  flex-direction: column;
+  margin-left: 40%;
 }
 
 .sobre{
-  margin-top:-5%;
+  align-self: flex-end;
+  margin-top:-3%;
 }
