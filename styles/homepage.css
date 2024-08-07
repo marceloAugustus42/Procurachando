@@ -15,6 +15,7 @@ header {
     display: block;
     margin: auto;
     max-width: 100%;
+    margin-left: 1560%;
   }
 
 body {
@@ -69,11 +70,14 @@ img{
     cursor: pointer;
 }
 
-form {
-  margin-bottom: 2%;
+#categorias{
+  font-family: Semi Bold Italic;
+  color:#fff;
+  margin-left: 5%;
+
 }
 
-.container-de-anuncio-princal {
+.categorias {
   display: flex;
   justify-content: space-around;
   gap: 5%; 
@@ -81,9 +85,32 @@ form {
   background-color:azure;
 }
 
-.image-item img{
+form {
+  margin-bottom: 2%;
+}
+
+.container-de-anuncio-princal {
+  display: flex;
+  justify-content: space-around; 
+  padding: 2%; 
+  background-color:azure;
+}
+
+.image-item{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: aquamarine;
   max-width: 100%;
   height: auto;
+  border-radius: 8px;
+}
+
+.ajuste-imagem{
+  padding: 9%;
+  margin: -9%;
   border-radius: 8px;
 }
 
@@ -92,3 +119,14 @@ form {
     font-size: 19px;
 }
 
+footer {
+	background-color: #333;
+	color: #fff;
+  padding: 2%;
+	text-align: center;
+	margin-top: 4%;
+}
+
+.sobre{
+  margin-top:-5%;
+}
