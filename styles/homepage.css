@@ -149,6 +149,7 @@ form {
   max-width: 100%;
   height: auto;
   border-radius: 8px;
+  text-align: center;
 }
 
 .ajuste-imagem{
@@ -157,6 +158,10 @@ form {
   padding: 9%;
   margin: -9%;
   border-radius: 8px;
+}
+
+.ajuste-texto {
+  color: #333;
 }
 
 ::-webkit-input-placeholder{
