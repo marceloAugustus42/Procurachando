@@ -6,23 +6,58 @@
         <title>Procurachando</title>
         <link rel="stylesheet" href="./styles/cadastro.css">
     </head>
-    <header>
-        <!--Nada aqui por enquanto-->
-    </header>
+
+    <header class="cabecalho">
+            <div id="LupaHeader">
+                <img src="./assets/source/LupaLogo.png" alt="Procurachando" href="index.html" width="60" height="60" class="banner">
+            </div>
+
+            <nav class="botoes-cab">
+                <button class="botao-cab"><a href="./cadastro.html">Cadastro</a></button>
+                <button class="botao-cab"><a href="./login.html">Entrar</a></button>
+                <button class="botao-cab"><a href="/">Anunciar</a></button>
+            </nav>
+        </header>
+
     <body>
-        <form>
-            <img src="./assets/source/Procuracchandologo1.png" alt="Procurachando" href="index.html" class="logo">
+        <form id="cadastroForm">
+            <img src="./assets/source/Procuracchandologo1.png" alt="Procurachando" class="logo">
             <div class="background"></div>
-            <input type="text" class="box" placeholder="Nome">
+                
+            <input type="text" id="nome" class="box" placeholder="Nome">
             <br><br>
-            <input type="text" class="box" placeholder="Email">
+            <input type="text" id="email" class="box" placeholder="Email">
             <br><br>
-            <input type="password" class="box" placeholder="Senha">
+            <input type="password" id="senha" class="box" placeholder="Senha">
             <br><br>
-            <input type="password" class="box" placeholder="Confirme sua senha">
-            <br><br>
-            <button class="buscar"><a href="login.html">Entrar</a></button>
+            <input type="password" id="confirmeSenha" class="box" placeholder="Confirme sua senha">
+            <br><br>    
+            <button type="button" class="buscar" onclick="cadastrar()">Cadastrar</button>
         </form>
+        
+        <script>
+            function cadastrar() {
+                var nome = document.getElementById('nome').value;
+                var email = document.getElementById('email').value;
+                var senha = document.getElementById('senha').value;
+                var confirmeSenha = document.getElementById('confirmeSenha').value;
+    
+                if (senha !== confirmeSenha) {
+                    alert("As senhas não correspondem.");
+                    return;
+                }
+
+                localStorage.setItem('nome', nome);
+                localStorage.setItem('email', email);
+                localStorage.setItem('senha', senha);
+    
+                alert(nome + " agora está cadastrado!");
+    
+                document.getElementById('cadastroForm').reset();
+    
+                window.location.href = "login.html";
+            }
+        </script>
     </body>
     
-</html>   <!--Isso aqui ta bem cru tem que fazer muita coisa no CSS pra ficar minimamente parecido com o figma (não tem nada no css ainda)-->
+</html>

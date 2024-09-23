@@ -1,145 +1,145 @@
 body {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  background: linear-gradient(0deg, #078B97, #004853);
 }
 
 .cabecalho {
-  display: flex;  
+  display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   background-color: #025964;
   box-shadow: 20px;
-  padding-top: 2%;
+  padding: 2%; /*padding com % ficou mais responssivo */
   border-radius: 10px;
   border-bottom: 3px solid #333;
   border-right: 3px solid #333;
   margin-top: -1.8%;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /*esse "wrap" deixa o cabeçalho quebrar linha quando a tela é pequena*/
 }
 
-#LupaHeader{ 
+#LupaHeader {
   display: flex;
   max-width: 100%;
   justify-content: center;
   align-items: center;
   flex-grow: 1;
-  margin-left: 15%;
+  /*margin-left: 0%;*/
 }
 
-body {
-  background: linear-gradient(0deg, #078B97, #004853);
-}
-
-div#img-responsiva img {
-  display: block; /*"prender" a imagem*/
-  margin: 5px auto;
-  max-width: 100%; /*Redimensionamento automatico*/
-}
-
-.banner{
+.banner {
   display: flex;
   align-items: center;
   justify-content: center;
-  }
+}
 
 .botoes-cab {
-  width: 17%;
   display: flex;
   justify-content: flex-end;
-  flex-shrink: 1;
-  }
+  /* flex-shrink: 1;*/ /*estava usando esse "shrink" antes pro tamanho do botão mudar mas ele não quebrava linha*/
+  flex-wrap: wrap; /*Adicionei o Wrap pros botões conseguirem "quebrar" a linha*/
+  gap: 10px; /*Espaço entre os botões*/
+  width: 100%; /*estava 17% */
+}
+
+.botao-cab {
+  background-color: #078B97;
+  border-radius: 20px;
+  color: white;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 10px 20px; /*Antes era largura fixa*/
+  flex-grow: 1; /*faz o botão ficar maior se tiver espaço*/
+}
 
 a {
   text-decoration: none;
   color: white;
 }
 
-.buscar{
-  width: 19%;
-  display: flex;
-  justify-content: center;
+.buscar {
+  width: 100%;
+  max-width: 500px; /*definido tamanho máximo pra barra de busca*/
   padding: 1% 2%;
   border-radius: 12px;
   margin-top: 2.5%;
-  margin-left: 38%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
 
-.botao-cab{
-  width: 40%;
-  height: 45px;
-  background-color: #078B97;
-  border-radius: 20px;
-  color: white;
-  text-align: center;
-  display: inline-block;
-  font-size: 16px;
-  margin-left: 2%;
-  cursor: pointer;
+/* Img do banner responsiva (foi feito antes de implementar responsividade em tudo) preferi não mudar nada aqui :p */
+div#img-responsiva img {
+  display: block;
+  margin: 5px auto;
+  max-width: 100%;
+  height: auto;
 }
 
-#titulos{
+#titulos {
   font-family: Semi Bold Italic;
-  color:#fff;
+  color: #fff;
   margin-left: 5%;
-
+  text-align: center;
 }
 
 .botoes-cat {
   display: flex;
   justify-content: space-around;
-  gap: 5%; 
-  padding: 2%; 
+  flex-wrap: wrap; /*quebra de linha*/
+  gap: 5%; /*Espaço entre os botões */
+  padding: 2%;
 }
 
-.botao-cat{
+.botao-cat {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 10%;
+  width: 100%;
+  max-width: 150px; /*definção de tamanho máximo para o botão*/
   height: auto;
   background-color: #078B97;
   border-radius: 20px;
   color: white;
   text-align: center;
-  display: inline-block;
   font-size: 16px;
   cursor: pointer;
+  padding: 10px;
 }
 
 .botao-cat img {
-  width: 60%; 
+  width: 60%;
   height: auto;
 }
 
 .botao-cat a {
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: white; 
+  color: white;
   text-decoration: none;
-  height: 100%; 
+  height: 100%;
   width: 100%;
-}
-
-form {
-  margin-bottom: 2%;
 }
 
 .container-de-anuncio-princal {
   display: flex;
-  justify-content: space-around; 
-  padding: 2%; 
-
+  justify-content: space-around;
+  flex-wrap: wrap; /*itens agoram podem quebrar a linha*/
+  padding: 2%;
+  gap: 20px; /*adicionei espaço entre os itens*/
 }
 
-.image-item{
+.image-item {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -147,16 +147,15 @@ form {
   padding: 20px;
   background-color: #FFFF;
   max-width: 100%;
-  height: auto;
+  width: 100%;
+  max-width: 300px; /*tamanho máximo do container*/
   border-radius: 8px;
   text-align: center;
 }
 
-.ajuste-imagem{
-  width: 300px;
-  height: 300px;
-  padding: 9%;
-  margin: -9%;
+.ajuste-imagem {
+  width: 250px;
+  height: 250px;
   border-radius: 8px;
 }
 
@@ -164,30 +163,81 @@ form {
   color: #333;
 }
 
-::-webkit-input-placeholder{
-    font-family: Bold Italic;
-    font-size: 19px;
-}
-
 .rodape {
-  display:flex;
+  display: flex;
   flex-direction: row;
   justify-content: space-between;
-	background-color: #333;
-	color: #fff;
+  background-color: #333;
+  color: #fff;
   padding: 2%;
-	text-align: center;
-	margin-top: 4%;
-  flex-wrap: wrap;
+  text-align: center;
+  flex-wrap: wrap; /**/
 }
 
-.info{
+.info {
   display: flex;
   flex-direction: column;
-  margin-left: 40%;
+  text-align: center;
+  flex-basis: 100%;
 }
 
-.sobre{
+.sobre {
   align-self: flex-end;
-  margin-top:-3%;
+  text-align: center;
+  flex-basis: 100%;
+  margin-top: 10px;
+}
+
+/* Para tela menor:*/
+@media (max-width: 768px) { /*Media querie: as especificações de estilo abaixo serão aplicadas para telas menores que 768px*/
+  .cabecalho {
+      flex-direction: column; /*cabeçalho fica vertical*/
+      padding: 10px; 
+  }
+
+  #LupaHeader {
+      margin-left: 0;
+  }
+
+  .botoes-cab {
+      width: 100%;
+      justify-content: center;
+  }
+
+  .botao-cab {
+      width: 100%;
+      margin: 5px 0;
+  }
+
+  .buscar {
+      width: 90%;
+      margin-left: 5%;
+      margin-right: 5%;
+  }
+
+  .botoes-cat {
+      justify-content: center;
+  }
+
+  .botao-cat {
+      width: 45%;
+  }
+
+  .container-de-anuncio-princal {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .ajuste-imagem {
+      width: 100%;
+  }
+
+  .rodape {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .info, .sobre {
+      margin-top: 10px;
+  }
 }

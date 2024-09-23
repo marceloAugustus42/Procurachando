@@ -6,23 +6,53 @@
         <title>Procurachando</title>
         <link rel="stylesheet" href="./styles/login.css">
     </head>
-    <header>
-        <!--Nada aqui por enquanto-->
-    </header>
+    
     <body>
-        <form>
+        <header class="cabecalho">
+            <div id="LupaHeader">
+                <img src="./assets/source/LupaLogo.png" alt="Procurachando" href="index.html" width="60" height="60" class="banner">
+            </div>
+
+            <nav class="botoes-cab">
+                <button class="botao-cab"><a href="./cadastro.html">Cadastro</a></button>
+                <button class="botao-cab"><a href="./login.html">Entrar</a></button>
+                <button class="botao-cab"><a href="/">Anunciar</a></button>
+            </nav>
+        </header>
+
+        <form id="loginForm">
             <img src="./assets/source/Procuracchandologo1.png" alt="Procurachando" href="index.html" class="logo">
             <div class="background"></div>
-            <input type="text" class="box" placeholder="Login">
+            <input type="text" id="loginEmail" class="box" placeholder="Login">
             <br><br>
-            <input type="password" class="box" placeholder="Senha">
+            <input type="password" id="loginSenha" class="box" placeholder="Senha">
             <br><br>
             <div class="salvar">
                 <input type="radio">
                 <p>Salvar senha</p>
             </div>
-            <button class="buscar"><a href="index.html">Entrar</a></button>
+            <button type="submit" class="buscar" onclick="login(event)">Entrar</button>
         </form>
-    </body>
+
+        <script>
+            function login(event) {
+                event.preventDefault(); 
     
-</html>   <!--Isso aqui ta bem cru tem que fazer muita coisa no CSS pra ficar minimamente parecido com o figma (não tem nada no css ainda)-->
+                var loginEmail = document.getElementById('loginEmail').value;
+                var loginSenha = document.getElementById('loginSenha').value;
+
+                var storedEmail = localStorage.getItem('email');
+                var storedSenha = localStorage.getItem('senha');
+
+                if (loginEmail === storedEmail && loginSenha === storedSenha) {
+                    alert("Login bem-sucedido! Bem-vindo de volta!");
+                    window.location.href = "index.html";
+                } else {
+                    alert("Email ou senha incorretos. Tente novamente.");
+                }
+
+                document.getElementById('loginForm').reset(); 
+                }
+        </script>
+    </body>
+</html>
