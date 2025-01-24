@@ -1,0 +1,167 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to bottom, #078B97, #004853);
+    position: relative;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.product-image {
+    text-align: center;
+}
+
+.product-image img {
+    width: 300px;
+    height: 300px;
+}
+
+.product-name {
+    font-size: 24px;
+    margin: 20px 0 10px;
+    font-weight: bold;
+}
+
+.product-price {
+    font-size: 20px;
+    color: #ff5722;
+    margin-bottom: 20px;
+}
+
+.product-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.product-description {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.contact-info {
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.buy-button {
+    display: block;
+    background-color: #078B97;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    margin: 0 auto;
+    width: fit-content;
+}
+
+.buy-button:hover {
+    background-color: #004853;
+}
+
+.logo {
+    position: absolute;
+    bottom: 20px; 
+    right: 20px; 
+}
+
+.logo img {
+    max-width: 200px; 
+    height: auto;
+}
+
+@media (min-width: 768px) { /*Essa media querie ao define os ajustes para telas MAIORES que 768px*/
+    .logo img {
+        max-width: 500px; 
+    }
+    .container {
+        flex-direction: row;
+    }
+
+    .product-image {
+        flex: 1;
+        padding-right: 20px;
+    }
+
+    .product-details {
+        flex: 1;
+    }
+    
+}
+
+.cabecalho {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #025964;
+    box-shadow: 20px;
+    padding: 1%;
+    border-radius: 10px;
+    border-bottom: 3px solid #333;
+    border-right: 3px solid #333;
+    margin: 0; 
+    top: 0; 
+    width: 100%; 
+    position: fixed; 
+    z-index: 1000; 
+    flex-wrap: wrap;
+}
+
+  
+#LupaHeader {
+    display: flex;
+    max-width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    /*margin-left: 0%;*/
+}
+  
+.banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+.botoes-cab {
+    display: flex;
+    justify-content: flex-end;
+    /* flex-shrink: 1;*/ /*estava usando esse "shrink" antes pro tamanho do botão mudar mas ele não quebrava linha*/
+    flex-wrap: wrap; /*Adicionei o Wrap pros botões conseguirem "quebrar" a linha*/
+    gap: 10px; /*Espaço entre os botões*/
+    width: 100%; /*estava 17% */
+}
+  
+.botao-cab {
+    background-color: #078B97;
+    border-radius: 20px;
+    color: white;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 10px 20px; /*Antes era largura fixa*/
+    flex-grow: 1; /*faz o botão ficar maior se tiver espaço*/
+}
