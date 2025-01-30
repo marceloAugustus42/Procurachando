@@ -1,0 +1,87 @@
+CREATE TABLE usuario
+(
+ qtd_vendas INT,  
+ telefone_contato VARCHAR (n),
+ historico_compra TEXT,
+ fotos INT,  
+ data_nascimento INT,  
+ cpf VARCHAR(n),  
+ adm INT,  
+ cep VARCHAR (n),
+ cupons_usados VARCHAR (n)
+ email VARCHAR(n),  
+ senha VARCHAR(n),   
+ nome VARCHAR(n),  
+ reputacao VARCHAR(n),  
+ id_usuario INT PRIMARY KEY,  
+);
+
+CREATE TABLE produto
+(
+ id_produto INT PRIMARY KEY,  
+ nome VARCHAR(n),  
+ descricao INT,  
+ preco FLOAT,  
+ vendedor VARCHAR(n),  
+ categoria VARCHAR(n),  
+ data_postagem DATE,  
+ idusuario INT,  
+ fotos0 INT,  
+ fotos1 INT,  
+ fotos2 INT,  
+ fotos3 INT,  
+ fotos4 INT,  
+ fotos5 INT,  
+ fotos6 INT,  
+ fotos7 INT,  
+ fotos8 INT,  
+ fotos9 INT,  
+);
+
+CREATE TABLE cupons
+(
+ validade DATE,  
+ codigo INT,  
+ restricoes_categorias INT,  
+ restricoes_valores INT,  
+ bol_disponivel INT,  
+ nome VARCHAR(n),  
+ usos INT,  
+ qtd_usos INT,  
+);
+
+CREATE TABLE dados_gerais
+(
+);
+
+CREATE TABLE possui
+(
+ id_usuario INT PRIMARY KEY,  
+ idcupons INT PRIMARY KEY,  
+);
+
+CREATE TABLE aceita
+(
+ id_produto INT PRIMARY KEY,  
+ idcupons INT PRIMARY KEY,  
+);
+
+CREATE TABLE cupons_usados
+(
+ nome INT PRIMARY KEY,  
+ id_usuario INT,  
+);
+
+CREATE TABLE historico_compras
+(
+ nome INT PRIMARY KEY,  
+ id_usuario INT,  
+);
+
+ALTER TABLE produto ADD FOREIGN KEY(idusuario) REFERENCES usuario (idusuario)
+ALTER TABLE possui ADD FOREIGN KEY(id_usuario) REFERENCES usuario (id_usuario)
+ALTER TABLE possui ADD FOREIGN KEY(idcupons) REFERENCES cupons (idcupons)
+ALTER TABLE aceita ADD FOREIGN KEY(id_produto) REFERENCES produto (id_produto)
+ALTER TABLE aceita ADD FOREIGN KEY(idcupons) REFERENCES cupons (idcupons)
+ALTER TABLE cupons_usados ADD FOREIGN KEY(id_usuario) REFERENCES usuario (id_usuario)
+ALTER TABLE historico_compras ADD FOREIGN KEY(id_usuario) REFERENCES usuario (id_usuario)

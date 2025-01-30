@@ -16,7 +16,7 @@
             <nav class="botoes-cab">
                 <a href="./cadastro.php"><button class="botao-cab">Cadastro</button></a>
                 <a href="./login.php"><button class="botao-cab">Entrar</button></a>
-                <a href="/"></a><button class="botao-cab">Anunciar</button></a>
+                <a href="./anunciar.php"></a><button class="botao-cab">Anunciar</button></a>
             </nav>
         </header>
 

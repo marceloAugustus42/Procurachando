@@ -15,7 +15,7 @@
             <nav class="botoes-cab">
                 <button class="botao-cab"><a href="./cadastro.php">Cadastro</a></button>
                 <button class="botao-cab"><a href="./login.php">Entrar</a></button>
-                <button class="botao-cab"><a href="/">Anunciar</a></button>
+                <button class="botao-cab"><a href="./anunciar.php">Anunciar</a></button>
             </nav>
         </header>
 
@@ -26,7 +26,7 @@
                 
             <input type="text" id="nome" name="nome" class="box" placeholder="Nome" required>
             <br><br>
-            <input type="text" id="email" name="email" class="box" placeholder="Email" required>
+            <input type="email" id="email" name="email" class="box" placeholder="Email" required>
             <br><br>
             <input type="text" id="telefone" name="telefone" class="box" placeholder="Telefone" required>
             <br><br>
@@ -36,13 +36,14 @@
             <br><br>
             <input type="password" id="senha" name="senha" class="box" placeholder="Senha" required>
             <br><br>
-            <input type="password" id="confirmeSenha" class="box" placeholder="Confirme sua senha" required>
+            <input type="password" id="confirmeSenha" name="senhac" class="box" placeholder="Confirme sua senha" required>
             <br><br>    
             <button type="submit" class="buscar">Cadastrar</button>
         </form>
         
         <script>
             function cadastrar() {
+                
                 var nome = document.getElementById('nome').value;
                 var email = document.getElementById('email').value;
                 var senha = document.getElementById('senha').value;
